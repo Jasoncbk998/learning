@@ -1,4 +1,4 @@
-package com.jason.com.jason.linkedlist;
+package com.jason.linkedlist;
 
 
 
