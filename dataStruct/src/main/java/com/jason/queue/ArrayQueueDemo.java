@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Description
  * Create by Jason
  * Date 2020/7/17 13:14
+ *
  */
 public class ArrayQueueDemo {
 
@@ -85,7 +86,7 @@ class ArrayQueue {
     }
 
     public void showQueue() {
-//遍历
+        //遍历
         if (isEmpty()) {
             System.out.println("队列是空的,没有数据");
             return;
@@ -123,7 +124,7 @@ class ArrayQueue {
         arr[rear] = n;
     }
 
-
+    //判断是否是空
     private boolean isFull() {
         return rear == maxSize - 1;
     }

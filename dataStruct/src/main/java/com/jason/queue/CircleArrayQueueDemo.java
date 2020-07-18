@@ -7,6 +7,9 @@ import java.util.Scanner;
  * Description
  * Create by Jason
  * Date 2020/7/17 13:42
+ *
+ * 队列 有序列表 ,可以用数据 链表来实现
+ * 先入先出,先存入队列的数据,先取出,后存入的后取出
  */
 public class CircleArrayQueueDemo {
     public static void main(String[] args) {

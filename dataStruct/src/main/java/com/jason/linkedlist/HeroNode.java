@@ -12,6 +12,38 @@ public class HeroNode {
     public String nickname;//昵称
     public HeroNode next; //指向下一个节点
 
+    public int getNo() {
+        return no;
+    }
+
+    public void setNo(int no) {
+        this.no = no;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public HeroNode getNext() {
+        return next;
+    }
+
+    public void setNext(HeroNode next) {
+        this.next = next;
+    }
+
     /**
      * 不用吧节点也给加进去,但是他在内存也有存储
      * @return
