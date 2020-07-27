@@ -1,4 +1,4 @@
-package com.jason.linkedlist;
+package com.jason.linkedlist.single_linked;
 
 /**
  * ClassName HeroNode

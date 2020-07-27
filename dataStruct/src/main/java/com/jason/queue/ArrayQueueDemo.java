@@ -8,7 +8,8 @@ import java.util.Scanner;
  * Description
  * Create by Jason
  * Date 2020/7/17 13:14
- *
+ * <p>
+ * 队列
  */
 public class ArrayQueueDemo {
 

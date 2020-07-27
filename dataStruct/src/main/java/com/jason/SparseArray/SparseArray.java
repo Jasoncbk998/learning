@@ -5,18 +5,17 @@ package com.jason.SparseArray;
  * Description
  * Create by Jason
  * Date 2020/7/17 12:49
- *
+ * <p>
  * 优点：
- *
+ * <p>
  * 避免了基本数据类型的装箱操作
  * 不需要额外的结构体，单个元素的存储成本更低
  * 数据量小的情况下，随机访问的效率更高
  * 缺点：
- *
+ * <p>
  * 插入操作需要复制数组，增删效率降低
  * 数据量巨大时，复制数组成本巨大，gc()成本也巨大
  * 数据量巨大时，查询效率也会明显下降
- *
  */
 public class SparseArray {
     public static void main(String[] args) {
@@ -110,9 +109,9 @@ public class SparseArray {
         //输出恢复后的二维数组
         System.out.println();
         System.out.println("恢复后的二维数组");
-        for(int[] row : chessArr2){
-            for(int data: row){
-                System.out.printf("%d\t",data);
+        for (int[] row : chessArr2) {
+            for (int data : row) {
+                System.out.printf("%d\t", data);
             }
             System.out.println();
         }
@@ -129,8 +128,6 @@ public class SparseArray {
          * 0	0	0	0	0	0	0	0	0	0	0
          * 0	0	0	0	0	0	0	0	0	0	0
          */
-
-
 
 
     }
