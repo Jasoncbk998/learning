@@ -24,19 +24,20 @@ import java.util.Arrays;
  */
 public class delrepeat {
     public static int removeDuplicates1(int[] nums) {
-        if(nums == null || nums.length == 0) return 0;
+        if (nums == null || nums.length == 0) return 0;
         int p = 0;
         int q = 1;
-        while(q < nums.length){
-            if(nums[p] != nums[q]){
+        while (q < nums.length) {
+            if (nums[p] != nums[q]) {
                 nums[p + 1] = nums[q];
                 p++;
             }
             q++;
         }
-        System.out.println(Arrays.toString(nums));
+//        System.out.println(Arrays.toString(nums));
         return p + 1;
     }
+
     public static int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
         int i = 0;
@@ -53,13 +54,14 @@ public class delrepeat {
                 nums[i] = nums[j];
             }
         }
-        System.out.println(Arrays.toString(nums));
+        System.out.println(Arrays.toString(Arrays.copyOf(nums, i+1)));
         return i + 1;
     }
 
     public static void main(String[] args) {
-        int nums[] = {1,1,3,4,4,2,2};//[1, 3, 4, 2, 4, 2, 2]
-        int i = removeDuplicates1(nums);
+        int nums[] = {1, 1, 3, 4, 4, 2, 2};//[1, 3, 4, 2, 4, 2, 2]
+        int i = removeDuplicates(nums);
+
         System.out.println(i);
 
 
