@@ -9,6 +9,7 @@ import java.util.Scanner;
  * @Created by jason
  * <p>
  * 相当于自己定义一个缓存
+ * 可以使用数据结构在内存中对数据进行操作,不用频繁交互数据库
  */
 public class hashtbDemo {
 

@@ -17,7 +17,8 @@ public class HashTab {
         //初始化empLinkedListArray
         empLinkedListArray = new EmpLinkedList[size];
         //？留一个坑, 这时不要分别初始化每个链表
-        //精辟
+        //精辟,这里需要for循环进行创建要求数量的链表
+        //链表是管理在数组里  数组 01234 代表了5个链表
         for(int i = 0; i < size; i++) {
             empLinkedListArray[i] = new EmpLinkedList();
         }

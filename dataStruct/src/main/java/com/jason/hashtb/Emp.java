@@ -11,7 +11,7 @@ package com.jason.hashtb;
 public class Emp {
     public int id;
     public String name;
-    public Emp next; //next 默认为 null
+    public Emp next; //next 默认为 null,指向一个新的对象
     public Emp(int id, String name) {
         super();
         this.id = id;

@@ -21,6 +21,5 @@ public class CASDemo {
         System.out.println(atomic.compareAndSet(5, 2019) + "\t 当前值:" + atomic.get());//true	 当前值:2019
         System.out.println(atomic.compareAndSet(5, 2014) + "\t 当前值:" + atomic.get());//false	 当前值:2019
 
-
     }
 }

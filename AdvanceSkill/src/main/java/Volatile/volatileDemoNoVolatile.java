@@ -18,8 +18,6 @@ import java.util.concurrent.TimeUnit;
 
 
 public class volatileDemoNoVolatile {
-
-
     public static void main(String[] args) {
         myDataNoVolatile myData = new myDataNoVolatile(); //线程操作资源类
         //第一个线程

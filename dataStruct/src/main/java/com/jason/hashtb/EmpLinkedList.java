@@ -29,7 +29,7 @@ public class EmpLinkedList {
             }
             curEmp = curEmp.next; //后移
         }
-        //退出时直接将emp 加入链表
+        //退出时直接将emp 加入链表,加入当前链表的后一个
         curEmp.next = emp;
     }
 
@@ -42,6 +42,7 @@ public class EmpLinkedList {
         System.out.print("第 " + (no + 1) + " 链表的信息为");
         Emp curEmp = head; //辅助指针
         while (true) {
+            //循环输出
             System.out.printf(" => id=%d name=%s\t", curEmp.id, curEmp.name);
             if (curEmp.next == null) {//说明curEmp已经是最后结点
                 break;
