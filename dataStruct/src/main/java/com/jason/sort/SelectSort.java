@@ -1,6 +1,7 @@
 package com.jason.sort;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -9,6 +10,7 @@ import java.util.Date;
  * Create by Jason
  * Date 2020/7/24 19:17
  * <p>
+ * 选择排序
  * 从小开始找,放到最后一个
  * 时间复杂度 也是o(n^2)
  * 效率高于冒泡排序
@@ -16,41 +18,47 @@ import java.util.Date;
  */
 public class SelectSort {
     public static void main(String[] args) {
-//        int[] arr = {101, 34, 119, 1, -1, 90, 123};
-//        selectsort(arr);
+        int[] arr = {101, 34, 119, 1, -1, 90, 123};
+        selectsort(arr);
+        System.out.println(Arrays.toString(arr));
 
 //创建要给80000个的随机的数组
-        int[] arr = new int[80000];
-        for (int i = 0; i < 80000; i++) {
-            arr[i] = (int) (Math.random() * 8000000); // 生成一个[0, 8000000) 数
-        }
-
-        System.out.println("排序前");
-        //System.out.println(Arrays.toString(arr));
-
-        Date data1 = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String date1Str = simpleDateFormat.format(data1);
-        System.out.println("排序前的时间是=" + date1Str);
-
-        selectsort(arr);
-
-
-        Date data2 = new Date();
-        String date2Str = simpleDateFormat.format(data2);
-        System.out.println("排序前的时间是=" + date2Str);
-
-
+//        int[] arr = new int[80000];
+//        for (int i = 0; i < 80000; i++) {
+//            arr[i] = (int) (Math.random() * 8000000); // 生成一个[0, 8000000) 数
+//        }
+//
+//        System.out.println("排序前");
+//        //System.out.println(Arrays.toString(arr));
+//
+//        Date data1 = new Date();
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String date1Str = simpleDateFormat.format(data1);
+//        System.out.println("排序前的时间是=" + date1Str);
+//
+//        selectsort(arr);
+//
+//
+//        Date data2 = new Date();
+//        String date2Str = simpleDateFormat.format(data2);
+//        System.out.println("排序前的时间是=" + date2Str);
     }
 
     public static void selectsort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int minIndex = i;//最小数的索引
-            int min = arr[i];
-            //拿到最小数的下表
+            int min = arr[i];//假设arr[i]是最小值
+            //拿到最小数的下标
+            //这个循环取的值永远是上一个循环取值的下一个值
+            //第一轮  从第一个循环中取到arr[0],然后用arr[0]在第二个循环中与arr[1]--arr[n] 依次比较,取得一个最小值
+            //第二轮  在第一个循环中取得arr[1],用arr[1]与第二个循环中的arr[2]--arr[n]依次比较,取得一个最小值
+            // ...
             for (int j = i + 1; j < arr.length; j++) {
                 /**
                  * 如果是从大道小 =>  min < arr[j]
+                 */
+                /**
+                 * 这一步是找最小值,将arr[i]元素依次与后边元素比较,找到最小值进行替换
                  */
                 if (min > arr[j]) {//说明假定的最小值,并不是最小
                     min = arr[j];//重置min
@@ -58,8 +66,11 @@ public class SelectSort {
                 }
             }
             //将最小值,放在arr[0],交换
+            //因为minIndex已经被赋值了,所以跟i不相等,所以找到了最小值进行替换
             if (minIndex != i) {
+                //将找到的最小值与arr[i]交换
                 arr[minIndex] = arr[i];
+                //将i位换成最小值
                 arr[i] = min;//取小
             }
 //            System.out.println(Arrays.toString(arr));// 1, 34, 119, 101

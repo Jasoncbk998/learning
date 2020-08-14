@@ -2,6 +2,7 @@ package com.jason.leetcode.primary.array;
 
 import sun.print.SunMinMaxPage;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -22,7 +23,7 @@ import java.util.Arrays;
  * 函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
  * 你不需要考虑数组中超出新长度后面的元素。
  */
-public class delrepeat {
+public class num_26_delrepeat {
     public static int removeDuplicates1(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int p = 0;
@@ -40,6 +41,7 @@ public class delrepeat {
 
     public static int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
+        ArrayList<Integer> list = new ArrayList<>();
         int i = 0;
         for (int j = 1; j < nums.length; j++) {
             /**第一次 j=1
@@ -51,19 +53,19 @@ public class delrepeat {
 
             if (nums[j] != nums[i]) {
                 i++;
+                list.add(i + 1);
                 nums[i] = nums[j];
             }
         }
-        System.out.println(Arrays.toString(Arrays.copyOf(nums, i+1)));
+        System.out.println("去除重复元素的数据:" + Arrays.toString(Arrays.copyOf(nums, i + 1)));
+        System.out.println("重复元素的索引: \t" + list.toString());
         return i + 1;
     }
 
     public static void main(String[] args) {
-        int nums[] = {1, 1, 3, 4, 4, 2, 2};//[1, 3, 4, 2, 4, 2, 2]
+        int nums[] = {1, 2, 3, 5, 5, 1, 2, 3, 4, 5, 6};//[2,5,1, 3, 4, 2, 4, 2, 2]
         int i = removeDuplicates(nums);
 
         System.out.println(i);
-
-
     }
 }

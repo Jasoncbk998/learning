@@ -9,29 +9,32 @@ import java.util.Date;
  * Description
  * Create by Jason
  * Date 2020/7/27 16:43
+ * 希尔排序
  * 尽量将小的数放到前边,大的数尽量放到最后
  */
 public class ShellSort {
     public static void main(String[] args) {
-//        int[] arr = { 8, 9, 1, 7, 2, 3, 5, 4, 6, 0 };
-//        shellSort(arr);
-        // 创建要给80000个的随机的数组
-        int[] arr = new int[80000];
-        for (int i = 0; i < 80000; i++) {
-            arr[i] = (int) (Math.random() * 80000); // 生成一个[0, 8000000) 数
-        }
-        System.out.println("排序前");
-        Date data1 = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String date1Str = simpleDateFormat.format(data1);
-        System.out.println("排序前的时间是=" + date1Str);
-
-//        shellSort(arr); //交换式
-        shellSort2(arr);//移位方式
-
-        Date data2 = new Date();
-        String date2Str = simpleDateFormat.format(data2);
-        System.out.println("排序前的时间是=" + date2Str);
+//        int[] arr = {8, 9, 1, 7, 2, 3, 5, 4, 6, 0};
+        int[] arr = {8, 1, 3, 4, 2, 5};
+        shellSort2(arr);
+        System.out.println(Arrays.toString(arr));
+//        // 创建要给80000个的随机的数组
+//        int[] arr = new int[80000];
+//        for (int i = 0; i < 80000; i++) {
+//            arr[i] = (int) (Math.random() * 80000); // 生成一个[0, 8000000) 数
+//        }
+//        System.out.println("排序前");
+//        Date data1 = new Date();
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String date1Str = simpleDateFormat.format(data1);
+//        System.out.println("排序前的时间是=" + date1Str);
+//
+////        shellSort(arr); //交换式
+//        shellSort2(arr);//移位方式
+//
+//        Date data2 = new Date();
+//        String date2Str = simpleDateFormat.format(data2);
+//        System.out.println("排序前的时间是=" + date2Str);
         //System.out.println(Arrays.toString(arr));
     }
 
@@ -41,10 +44,12 @@ public class ShellSort {
     public static void shellSort(int[] arr) {
         int temp = 0;
         int count = 0;
-        // 根据前面的逐步分析，使用循环处理
+        //根据数组长度获得步长即分组个数
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
+            //获得每个分组
             for (int i = gap; i < arr.length; i++) {
-                // 遍历各组中所有的元素(共gap组，每组有个元素), 步长gap
+                //遍历每个分组中的元素,比如下标为0和下标为5的元素是一个组
+                //获取每个分组内元素
                 for (int j = i - gap; j >= 0; j -= gap) {
                     // 如果当前元素大于加上步长后的那个元素，说明交换
                     if (arr[j] > arr[j + gap]) {
@@ -57,8 +62,7 @@ public class ShellSort {
 //            System.out.println("希尔排序第" + (++count) + "轮 =" + Arrays.toString(arr));
         }
 
-		/*
-
+/*
 		// 希尔排序的第1轮排序
 		// 因为第1轮排序，是将10个数据分成了 5组
 		for (int i = 5; i < arr.length; i++) {
@@ -120,6 +124,7 @@ public class ShellSort {
                 int j = i;
                 int temp = arr[j];
                 if (arr[j] < arr[j - gap]) {
+                    //这里是插入排序
                     while (j - gap >= 0 && temp < arr[j - gap]) {
                         //移动
                         arr[j] = arr[j - gap];
