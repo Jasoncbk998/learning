@@ -6,6 +6,7 @@ package com.jason.tree.binarytree;
  * @Date 2020/7/29 10:41 上午
  * @Created by jason
  * //定义BinaryTree 二叉树
+ * 二叉树
  */
 public class BinaryTree {
     private HeroNode root;//根节点
