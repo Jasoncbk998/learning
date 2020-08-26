@@ -1,10 +1,11 @@
 package com.jason.leetcode.primary.string;
 
 /**
- * @Classname tttt
+ * @Classname 整数反转
  * @Description TODO
  * @Date 2020/8/6 1:15 下午
  * @Created by jason
+ * 整数反转
  * 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
  * <p>
  * 示例 1:

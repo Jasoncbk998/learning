@@ -68,7 +68,8 @@ public class InsertValueSsarch {
             return -1;
         }
 
-        // 求出mid, 自适应
+        // 求出mid, 自适应  有公式  int mid = left + (right – left) * (findVal – arr[left]) / (arr[right] – arr[left])\
+        //int mid = left + (right – left) * (findVal – arr[left]) / (arr[right] – arr[left])
         int mid = left + (right - left) * (findVal - arr[left]) / (arr[right] - arr[left]);
         int midVal = arr[mid];
         if (findVal > midVal) { // 说明应该向右边递归

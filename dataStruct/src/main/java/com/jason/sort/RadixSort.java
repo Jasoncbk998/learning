@@ -9,29 +9,34 @@ import java.util.Date;
  * @Description TODO
  * @Date 2020/7/28 11:23 上午
  * @Created by jason
+ * <p>
+ * 基数排序
  */
 public class RadixSort {
     public static void main(String[] args) {
-//        int arr[] = {53, 3, 542, 748, 14, 214};
+        int arr[] = {53, 3, 542, 748, 14, 214};
 
         // 80000000 * 11 * 4 / 1024 / 1024 / 1024 =3.3G
-        int[] arr = new int[8000000];
-        for (int i = 0; i < 8000000; i++) {
-            arr[i] = (int) (Math.random() * 8000000); // 生成一个[0, 8000000) 数
-        }
-        System.out.println("排序前");
-        Date data1 = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String date1Str = simpleDateFormat.format(data1);
-        System.out.println("排序前的时间是=" + date1Str);
-
         radixSort(arr);
-
-        Date data2 = new Date();
-        String date2Str = simpleDateFormat.format(data2);
-        System.out.println("排序前的时间是=" + date2Str);
-
         System.out.println("基数排序后 " + Arrays.toString(arr));
+//        int[] arr = new int[8000000];
+//
+//        for (int i = 0; i < 8000000; i++) {
+//            arr[i] = (int) (Math.random() * 8000000); // 生成一个[0, 8000000) 数
+//        }
+//        System.out.println("排序前");
+//        Date data1 = new Date();
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String date1Str = simpleDateFormat.format(data1);
+//        System.out.println("排序前的时间是=" + date1Str);
+//
+//        radixSort(arr);
+//
+//        Date data2 = new Date();
+//        String date2Str = simpleDateFormat.format(data2);
+//        System.out.println("排序前的时间是=" + date2Str);
+//
+//        System.out.println("基数排序后 " + Arrays.toString(arr));
 
     }
 

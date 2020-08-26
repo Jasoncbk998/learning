@@ -15,7 +15,6 @@ public class CallableDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         CallableDemo cl = new CallableDemo();
         cl.base();
-
     }
 
     public void base() throws ExecutionException, InterruptedException {
