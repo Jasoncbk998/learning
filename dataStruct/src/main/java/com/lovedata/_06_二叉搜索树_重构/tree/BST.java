@@ -1,7 +1,6 @@
-package com.lovedata._06_二叉搜索树2.tree;
+package com.lovedata._06_二叉搜索树_重构.tree;
 
 import java.util.Comparator;
-
 
 public class BST<E> extends BinaryTree<E> {
     private Comparator<E> comparator;
