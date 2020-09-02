@@ -1,7 +1,8 @@
 package com.lovedata._05_队列;
 
-import com.mj.circle.CircleDeque;
-import com.mj.circle.CircleQueue;
+
+import com.lovedata._05_队列.circle.CircleDeque;
+import com.lovedata._05_队列.circle.CircleQueue;
 
 public class Main {
 	

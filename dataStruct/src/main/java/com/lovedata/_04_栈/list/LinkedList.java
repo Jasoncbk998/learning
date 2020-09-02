@@ -1,6 +1,5 @@
 package com.lovedata._04_栈.list;
 
-import com.mj.list.AbstractList;
 
 public class LinkedList<E> extends AbstractList<E> {
 	private Node<E> first;

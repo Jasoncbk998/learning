@@ -1,6 +1,7 @@
 package com.lovedata._03_链表.circle;
 
-import com.mj.AbstractList;
+
+import com.lovedata._03_链表.AbstractList;
 
 public class SingleCircleLinkedList<E> extends AbstractList<E> {
 	private Node<E> first;

@@ -1,9 +1,6 @@
 package com.lovedata._07_AVL树.printer;
 
-import com.lovedata._06_二叉搜索树_重构.printer.BinaryTreeInfo;
-import com.lovedata._06_二叉搜索树_重构.printer.InorderPrinter;
-import com.lovedata._06_二叉搜索树_重构.printer.LevelOrderPrinter;
-import com.lovedata._06_二叉搜索树_重构.printer.Printer;
+import com.lovedata._07_AVL树.tree.AVLTree;
 
 /**
  * 
@@ -19,7 +16,7 @@ public final class BinaryTrees {
 		print(tree, null);
 	}
 
-	public static void println(BinaryTreeInfo tree) {
+	public static void println(AVLTree<Integer> tree) {
 		println(tree, null);
 	}
 

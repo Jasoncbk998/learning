@@ -1,7 +1,8 @@
 package com.lovedata._05_队列;
 
-import com.mj.list.LinkedList;
-import com.mj.list.List;
+
+import com.lovedata._05_队列.list.LinkedList;
+import com.lovedata._05_队列.list.List;
 
 public class Deque<E> {
 	private List<E> list = new LinkedList<>();

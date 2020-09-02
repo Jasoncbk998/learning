@@ -1,6 +1,7 @@
 package com.lovedata._03_链表;
 
-import com.mj.circle.CircleLinkedList;
+
+import com.lovedata._03_链表.circle.CircleLinkedList;
 
 public class Main {
 	
