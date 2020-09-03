@@ -1,6 +1,7 @@
 package com.lovedata._题目总结.高频题;
 
-import com.mj.Asserts;
+
+import com.lovedata._题目总结.Asserts;
 
 /**
  * https://leetcode-cn.com/problems/lru-cache/

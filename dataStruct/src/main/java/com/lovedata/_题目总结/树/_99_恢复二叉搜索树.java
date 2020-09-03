@@ -1,6 +1,6 @@
 package com.lovedata._题目总结.树;
 
-import common.TreeNode;
+import com.lovedata._题目总结.common.TreeNode;
 
 /**
  * https://leetcode-cn.com/problems/recover-binary-search-tree/
