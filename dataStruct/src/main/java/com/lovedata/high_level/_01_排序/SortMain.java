@@ -3,9 +3,7 @@ package com.lovedata.high_level._01_排序;
 import java.util.Arrays;
 
 import com.lovedata.high_level._01_排序.sort.Sort;
-import com.lovedata.high_level._01_排序.sort.cmp.BubbleSort3;
-import com.lovedata.high_level._01_排序.sort.cmp.HeapSort;
-import com.lovedata.high_level._01_排序.sort.cmp.SelectionSort;
+import com.lovedata.high_level._01_排序.sort.compare.SelectionSort;
 import com.lovedata.high_level.tools.Asserts;
 import com.lovedata.high_level.tools.Integers;
 
@@ -17,7 +15,10 @@ public class SortMain {
 //        Integer[] random = Integers.random(5, 1, 10);
 //        sort.sort(random);
 //        Integers.println(random);
-        testSorts(Integers.random(10000,5,1000),new SelectionSort());
+        testSorts(Integers.random(10000, 5, 1000)
+                , new SelectionSort()
+
+        );
     }
 
     static void testSorts(Integer[] array, Sort... sorts) {

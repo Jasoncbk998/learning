@@ -1,4 +1,4 @@
-package com.lovedata.high_level._01_排序.sort.cmp;
+package com.lovedata.high_level._01_排序.sort.compare;
 
 
 import com.lovedata.high_level._01_排序.sort.Sort;

@@ -1,7 +1,14 @@
 package com.lovedata.high_level._01_排序.sort;
 
+/**
+ * 计数排序
+ * 针对整数
+ *
+ */
 public class CountingSort extends Sort<Integer> {
-
+	/**
+	 * 优化后的计数排序
+	 */
 	@Override
 	protected void sort() {
 		// 找出最值
@@ -18,11 +25,16 @@ public class CountingSort extends Sort<Integer> {
 		
 		// 开辟内存空间，存储次数
 		int[] counts = new int[max - min + 1];
+
 		// 统计每个整数出现的次数
 		for (int i = 0; i < array.length; i++) {
+			//array[i] - min 是这个元素在排序数组中的索引
 			counts[array[i] - min]++;
 		}
 		// 累加次数
+		//不用算int=0,因为前边没有元素
+		// i +=i-1 出现 就是当前值和前一个值进行求和计数到当前值
+		//这个就是counts数组中的元素值就是次数了
 		for (int i = 1; i < counts.length; i++) {
 			counts[i] += counts[i - 1];
 		}
@@ -30,6 +42,7 @@ public class CountingSort extends Sort<Integer> {
 		// 从后往前遍历元素，将它放到有序数组中的合适位置
 		int[] newArray = new int[array.length];
 		for (int i = array.length - 1; i >= 0; i--) {
+			//赋值
 			newArray[--counts[array[i] - min]] = array[i];
 		}
 		
@@ -38,7 +51,14 @@ public class CountingSort extends Sort<Integer> {
 			array[i] = newArray[i];
 		}
 	}
-	
+
+	/**
+	 * 简单版
+	 * 效率低
+	 * 内存空间浪费
+	 * 不稳定
+	 * 不能排序负整数
+	 */
 	protected void sort0() {
 		// 找出最大值
 		int max = array[0];

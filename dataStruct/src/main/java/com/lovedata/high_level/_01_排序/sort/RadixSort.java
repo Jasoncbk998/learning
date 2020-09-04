@@ -1,5 +1,9 @@
 package com.lovedata.high_level._01_排序.sort;
 
+/**
+ * 非比较排序
+ * 基数排序
+ */
 public class RadixSort extends Sort<Integer> {
 
 	@Override

@@ -1,8 +1,8 @@
 package com.lovedata.high_level._01_排序.sort;
 
 import com.lovedata.high_level._01_排序.Student;
-import com.lovedata.high_level._01_排序.sort.cmp.SelectionSort;
-import com.lovedata.high_level._01_排序.sort.cmp.ShellSort;
+import com.lovedata.high_level._01_排序.sort.compare.SelectionSort;
+import com.lovedata.high_level._01_排序.sort.compare.ShellSort;
 
 import java.text.DecimalFormat;
 
