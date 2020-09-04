@@ -1,17 +1,15 @@
 package com.lovedata.pro._03_图;
 
+import com.lovedata.pro._03_图.graph.Graph;
+import com.lovedata.pro._03_图.graph.ListGraph;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.mj.graph.Graph;
-import com.mj.graph.Graph.EdgeInfo;
-import com.mj.graph.Graph.PathInfo;
-import com.mj.graph.Graph.WeightManager;
-import com.mj.graph.ListGraph;
 
 public class Main {
-	static WeightManager<Double> weightManager = new WeightManager<Double>() {
+	static Graph.WeightManager<Double> weightManager = new  Graph.WeightManager<Double>() {
 		public int compare(Double w1, Double w2) {
 			return w1.compareTo(w2);
 		}
@@ -32,10 +30,10 @@ public class Main {
 	
 	static void testMultiSp() {
 		Graph<Object, Double> graph = directedGraph(Data.NEGATIVE_WEIGHT1);
-		Map<Object, Map<Object, PathInfo<Object, Double>>> sp = graph.shortestPath();
-		sp.forEach((Object from, Map<Object, PathInfo<Object, Double>> paths) -> {
+		Map<Object, Map<Object, Graph.PathInfo<Object, Double>>> sp = graph.shortestPath();
+		sp.forEach((Object from, Map<Object, Graph.PathInfo<Object, Double>> paths) -> {
 			System.out.println(from + "---------------------");
-			paths.forEach((Object to, PathInfo<Object, Double> path) -> {
+			paths.forEach((Object to, Graph.PathInfo<Object, Double> path) -> {
 				System.out.println(to + " - " + path);
 			});
 		});
@@ -43,17 +41,17 @@ public class Main {
 	
 	static void testSp() {
 		Graph<Object, Double> graph = directedGraph(Data.SP);
-		Map<Object, PathInfo<Object, Double>> sp = graph.shortestPath("A");
+		Map<Object, Graph.PathInfo<Object, Double>> sp = graph.shortestPath("A");
 		if (sp == null) return;
-		sp.forEach((Object v, PathInfo<Object, Double> path) -> {
+		sp.forEach((Object v, Graph.PathInfo<Object, Double> path) -> {
 			System.out.println(v + " - " + path);
 		});
 	}
 	
 	static void testMst() {
 		Graph<Object, Double> graph = undirectedGraph(Data.MST_01);
-		Set<EdgeInfo<Object, Double>> infos = graph.mst();
-		for (EdgeInfo<Object, Double> info : infos) {
+		Set<Graph.EdgeInfo<Object, Double>> infos = graph.mst();
+		for (Graph.EdgeInfo<Object, Double> info : infos) {
 			System.out.println(info);
 		}
 	}
