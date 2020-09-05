@@ -1,5 +1,11 @@
 package com.lovedata.pro._04_递归;
 
+/**
+ * 尾调用
+ * 一个函数最后一个动作是调用,成为 尾调用
+ *
+ * 最后一个函数是调用自己,就是尾递归
+ */
 public class TailCall {
 	
 	public static void main(String[] args) {
