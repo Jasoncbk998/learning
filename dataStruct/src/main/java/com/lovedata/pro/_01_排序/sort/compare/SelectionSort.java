@@ -24,9 +24,14 @@ public class SelectionSort<T extends Comparable<T>> extends Sort<T> {
 //			}
 //			swap(max, end);
 //		}
-
+        /**
+         * 每次取子数组的第一位假定为最大值,逐次比较
+         */
         for (int end = array.length - 1; end > 0; end--) {
-            int max = 0;
+            int max = 0;//假定最大值的索引是0
+            //begin从1开始,是因为max默认值取0,所以不用取0
+            //begin<=end 是因为如果 比较到最后两个元素
+            //保证了max取0 begin=end=1 可以对0与1进行比较
             for (int begin = 1; begin <= end; begin++) {
                 //也就是max <= begin
                 if (cmp(max, begin) < 0) {

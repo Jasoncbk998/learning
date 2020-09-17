@@ -4,7 +4,7 @@ package com.lovedata.pro._01_排序.sort.compare;
 import com.lovedata.pro._01_排序.sort.Sort;
 
 /**
- * 归并跑排序
+ * 归并排序
  *
  * @param <T>
  */

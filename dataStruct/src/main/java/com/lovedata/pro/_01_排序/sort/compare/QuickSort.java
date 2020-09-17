@@ -41,10 +41,12 @@ public class QuickSort<T extends Comparable<T>> extends Sort<T> {
         T pivot = array[begin];
         // end指向最后一个元素
         end--;
+
         while (begin < end) {
             while (begin < end) {
+                //右边
                 //这里不加等于号,因为这样可以避免最坏情况出现
-                if (cmp(pivot, array[end]) < 0) { // 右边元素 > 轴点元素
+                if (cmp(pivot, array[end]) < 0) { //  轴点元素<右边元素
                     end--;
                 } else { // 右边元素 <= 轴点元素
                     //赋值begin 然后在begin++
@@ -52,9 +54,10 @@ public class QuickSort<T extends Comparable<T>> extends Sort<T> {
                     break;
                 }
             }
+            //左边
             while (begin < end) {
                 //这里不加等于号,因为这样可以避免最坏情况出现
-                if (cmp(pivot, array[begin]) > 0) { // 左边元素 < 轴点元素
+                if (cmp(pivot, array[begin]) > 0) { //  轴点元素>左边元素
                     begin++;
                 } else { // 左边元素 >= 轴点元素
                     //把这个元素挪到轴点元素右边,的end位置,然后end--
