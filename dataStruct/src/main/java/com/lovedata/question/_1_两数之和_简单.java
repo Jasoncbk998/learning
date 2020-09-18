@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @Date 2020/9/18 9:25 上午
  * @Created by jason
  */
-public class _1_两数之和 {
+public class _1_两数之和_简单 {
     /**
      * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
      * <p>

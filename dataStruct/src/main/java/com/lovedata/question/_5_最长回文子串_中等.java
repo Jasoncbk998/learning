@@ -8,7 +8,7 @@ package com.lovedata.question;
  *
  * 不会,题目总结中有答案,这个比较难,先放下
  */
-public class _5_最长回文子串 {
+public class _5_最长回文子串_中等 {
     public static void main(String[] args) {
 /**
  * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
