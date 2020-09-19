@@ -40,6 +40,10 @@ public class _2_数相加_中等 {
 
     }
 
+    public static ListNode addTwoNumbers3(ListNode l1, ListNode l2) {
+        return null;
+    }
+
     public static ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;
         if (l2 == null) return l1;

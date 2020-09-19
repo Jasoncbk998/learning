@@ -24,6 +24,11 @@ public class _53_最大子序和_简单 {
         System.out.println(sum);
     }
 
+    /**
+     * 思想很巧妙
+     * @param nums
+     * @return
+     */
     public static int maxSubArray(int[] nums) {
         int pre = 0, maxAns = nums[0];
         for (int x : nums) {
