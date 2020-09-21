@@ -27,8 +27,20 @@ public class _371_两整数之和_简单 {
         System.out.println(sum);
     }
 
+    /**
+     * 使用位操作
+     *
+     * @param a
+     * @param b
+     * @return
+     */
     public static int getSum(int a, int b) {
 
-        return 0;
+        while(b!=0){
+            int temp = a ^ b;
+             b = (a & b) << 1;
+             a=temp;
+        }
+        return a;
     }
 }
