@@ -32,6 +32,14 @@ public class _392_判断子序列_简单 {
         System.out.println(result);
     }
 
+    /**
+     * 传入两个串
+     * 首先初始化两个指针
+     * 按照指针进行取值比对,
+     * @param s  短串
+     * @param t  长串
+     * @return
+     */
     public static boolean isSubsequence(String s, String t) {
         int n = s.length();
         int m = t.length();
@@ -43,6 +51,6 @@ public class _392_判断子序列_简单 {
             }
             j++;
         }
-        return i==n;
+        return i == n;
     }
 }
