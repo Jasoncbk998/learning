@@ -11,6 +11,9 @@ import java.util.Arrays;
  * @Created by jason
  * <p>
  * 插入排序
+ * 思路就是
+ * 从第二个元素开始排序
+ * 用第二个元素跟第一个元素进行比较,保证前两个元素局部有序,在用第三个元素与前两个元素进行比较保证了前三个元素有序,以此类推
  */
 public class InsertionSort {
     static int[] nums;
@@ -31,7 +34,6 @@ public class InsertionSort {
         for (int begin = 1; begin < nums.length; begin++) {
             //将nums[begin]插入到适合的位置
             insert(begin, search(begin));
-
         }
     }
 
@@ -51,10 +53,12 @@ public class InsertionSort {
         while (begin < end) {
             //待插入元素和中间值进行比较,判断插入范围
             //确定该元素插入位置
-            int mid = (begin + end) >> 1;
+            int mid = (begin + end) >> 1;//除2 像左移位
             if (nums[index] < nums[mid]) {
-                end = mid;
+                //插入值<中间值
+                end = mid;//缩小范围,继续比对
             } else {
+                //中间值+1,既是该值插入位置
                 begin = mid + 1;
             }
         }
@@ -68,6 +72,14 @@ public class InsertionSort {
      * @param dest
      */
     private void insert(int source, int dest) {
+        //source代表的是需要排列的元素的索引位置
+        //dest代表的是该元素应该插入的位置
+        /**
+         * 比如,1,3,2
+         * source=2
+         * dest=1
+         * 也就是说元素2的插入的位置应该是1
+         */
         int num = nums[source];
         for (int i = source; i > dest; i--) {
             //移动
