@@ -18,7 +18,7 @@ public class _20_有效的括号_简单 {
 
     }
     public void test(){
-
+        System.out.println("aaa");
     }
 
     public static boolean isValid(String s) {
