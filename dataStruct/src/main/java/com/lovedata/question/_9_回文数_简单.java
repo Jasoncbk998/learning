@@ -12,7 +12,7 @@ public class _9_回文数_简单 {
         boolean palindrome = isPalindrome1(num);
         System.out.println(palindrome);
     }
-    // 正数可用 负数 目前有bug
+
     public static boolean isPalindrome1(int x) {
         if( x<0) return false;
         int a=x;
