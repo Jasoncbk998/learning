@@ -13,7 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>collection</module>
-        <module>base</module>
+        <module>Think_In_Java</module>
+        <module>fileZip</module>
     </modules>
 
 
