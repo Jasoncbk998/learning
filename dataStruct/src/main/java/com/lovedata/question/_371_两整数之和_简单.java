@@ -35,7 +35,6 @@ public class _371_两整数之和_简单 {
      * @return
      */
     public static int getSum(int a, int b) {
-
         while(b!=0){
             int temp = a ^ b;
              b = (a & b) << 1;
